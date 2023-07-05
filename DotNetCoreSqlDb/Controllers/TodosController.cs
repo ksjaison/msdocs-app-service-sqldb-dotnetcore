@@ -29,7 +29,7 @@ namespace DotNetCoreSqlDb.Controllers
         public async Task<IActionResult> Index()
         {
             var todos = new List<Todo>();
-            //byte[]? TodoListByteArray;
+            byte[]? TodoListByteArray;
 
             //TodoListByteArray = await _cache.GetAsync(_TodoItemsCacheKey);
             //if (TodoListByteArray != null && TodoListByteArray.Length > 0)
