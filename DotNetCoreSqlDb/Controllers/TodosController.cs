@@ -33,10 +33,10 @@ namespace DotNetCoreSqlDb.Controllers
 
             //TodoListByteArray = await _cache.GetAsync(_TodoItemsCacheKey);
             //if (TodoListByteArray != null && TodoListByteArray.Length > 0)
-            //{ 
+            //{
             //    todos = ConvertData<Todo>.ByteArrayToObjectList(TodoListByteArray);
             //}
-            //else 
+            //else
             //{
             //    todos = await _context.Todo.ToListAsync();
             //    TodoListByteArray = ConvertData<Todo>.ObjectListToByteArray(todos);
