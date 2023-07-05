@@ -29,19 +29,19 @@ namespace DotNetCoreSqlDb.Controllers
         public async Task<IActionResult> Index()
         {
             var todos = new List<Todo>();
-            byte[]? TodoListByteArray;
+            //byte[]? TodoListByteArray;
 
-            TodoListByteArray = await _cache.GetAsync(_TodoItemsCacheKey);
-            if (TodoListByteArray != null && TodoListByteArray.Length > 0)
-            { 
-                todos = ConvertData<Todo>.ByteArrayToObjectList(TodoListByteArray);
-            }
-            else 
-            {
-                todos = await _context.Todo.ToListAsync();
-                TodoListByteArray = ConvertData<Todo>.ObjectListToByteArray(todos);
-                await _cache.SetAsync(_TodoItemsCacheKey, TodoListByteArray);
-            }
+            //TodoListByteArray = await _cache.GetAsync(_TodoItemsCacheKey);
+            //if (TodoListByteArray != null && TodoListByteArray.Length > 0)
+            //{ 
+            //    todos = ConvertData<Todo>.ByteArrayToObjectList(TodoListByteArray);
+            //}
+            //else 
+            //{
+            //    todos = await _context.Todo.ToListAsync();
+            //    TodoListByteArray = ConvertData<Todo>.ObjectListToByteArray(todos);
+            //    await _cache.SetAsync(_TodoItemsCacheKey, TodoListByteArray);
+            //}
 
             return View(todos);
         }
